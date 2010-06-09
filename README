@@ -1,0 +1,33 @@
+LaTeX2MathML
+	Current version : 0.1a-3 (unstable)
+
+LaTeX2MathML is a set of PHP5 class which convert LaTeX to MathML.
+To use this script, you just need a PHP (5.1 at least) installation.
+
+More information :
+	* Jeremy Oden's Personal Home Page : 
+
+		<http://latex2mathml.freewebmaster.fr>
+
+
+	* Sourceforge page :
+
+		<http://sourceforge.net/projects/latex2mathml/>
+
+
+Here is the content of this archive : 
+
+> doc/  
+	[Empty, for the moment...]
+
+> files/ 
+	> config.php 		[Configuration file]
+	> config.class.php 	[Configuration class]
+	> latex2xml.class.php	[The main class !!!]
+	> commands.class.php	[Allows you to create your own LaTeX commands]
+	> style.css		[Css file]
+
+> examples/
+	> example1.php		[Read it ! It shows how to use the script.]
+
+As it is mentioned in the LICENCE file, LaTeX2MathML comes under BSD Licence.

@@ -1,0 +1,22 @@
+latex2mathml (0.1a-3)
+
+  * Bug correction, forgotten \right in config.php (lines 557 to 560)
+  * Bug correction, forgotten $this->prev_char in latex2xml.class.php 
+    (line 371)
+
+latex2mathml (0.1a-2)
+
+  * Bug correction, preg_match added in latex2xml.class.php (line 165)
+    and commands.class.php (line 153).
+
+latex2mathml (0.1a-1)
+
+  * Class newcommands is now fully functional.
+  * All classes are now singletons.
+
+latex2mathml (0.1a)
+
+  * No changes
+    This is the first release
+
+ -- Jeremy Oden <j.oden@wanadoo.fr>  Wed,  16 Jun 2009 14:48:49 +0100
