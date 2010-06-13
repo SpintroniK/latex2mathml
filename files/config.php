@@ -9,7 +9,7 @@ $com = commands::getInstance();
 
 $com->newCommand('\binom', 		2, '\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}');
 $com->newCommand('\dot', 		1, '\\overset{#1}{.}');
-$com->newCommand('\vec', 		1, '\\overset{#1}{\\rightarrow{}}');
+$com->newCommand('\vec', 		1, '\\woverset{#1}{\\rightarrow{}}');
 $com->newCommand('\overset',		2, '\\moverset{#2}{#1}');
 $com->newCommand('\msqrt', 		2, '\\root{#2}{#1}');
 
@@ -548,6 +548,7 @@ $config->add_command('text',		'mtext',	1);
 $config->add_command('root',		'mroot',	2);
 $config->add_command('overset',		'mover',	2);
 $config->add_command('moverset',	'mover',	2);
+$config->add_command('woverset',	'mover',	2,			array('accent' => 'true'));
 
 
 $config->add_symbol('left{',		'mo',		'left{');

@@ -75,9 +75,9 @@ class config
 	* @param $args  The number of argument for the command.
 	*/
 
-	public function add_command($latex, $mml, $args)
+	public function add_command($latex, $mml, $args, array $attr = array())
 	{
-		$this->element[$latex] = array('m' => $mml, 'args' => $args);
+		$this->element[$latex] = array('m' => $mml, 'args' => $args, 'attr' => $attr);
 	}
 
 	/**

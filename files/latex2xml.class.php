@@ -208,6 +208,17 @@ class LaTeX2Xml
 	}
 
 	/**
+	* Get the mathml attribute to put in the xml document
+	* @param $command The command.
+	* @return The corresponding mathml attribute.
+	*/
+
+	private function _getAttr($command)
+	{
+		return $this->element[$command]['attr'];
+	}
+
+	/**
 	* Create a new mathml node.
 	* @param $tag The name of the node.
 	* @param $content The content of the node.
@@ -347,17 +358,19 @@ class LaTeX2Xml
 			default:
 
 				$args = commands::getInstance()->_getArgs($command, $expr);
-	
+
 				$nArgs = count($args) - 1;
 
 				if($nArgs > 0)
 				{
-					$this->_openTag($this->_getTag($command));
+					$this->_openTag($this->_getTag($command), $this->_getAttr($command));
 					$args[0] = substr($args[0], strlen($command));
 					for($i=0; $i < $nArgs; $i++)
 					{
+						if($command != 'woverset' || $i!=1)
 						$this->_openTag('mrow');
 						$this->_parseExpr($args[$i]);
+						if($command != 'woverset' || $i!=1)
 						$this->_closeTag();
 					}
 
