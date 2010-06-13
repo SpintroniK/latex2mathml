@@ -369,7 +369,9 @@ class LaTeX2Xml
 					{
 						if($command != 'woverset' || $i!=1)
 						$this->_openTag('mrow');
+
 						$this->_parseExpr($args[$i]);
+
 						if($command != 'woverset' || $i!=1)
 						$this->_closeTag();
 					}
@@ -452,7 +454,10 @@ class LaTeX2Xml
 			switch($type)
 			{
 				case 'p': $p = array('open' => '(', 'close' => ')'); break;
+				case 'b': $p = array('open' => '[', 'close' => ']'); break;
+				case 'B': $p = array('open' => '{', 'close' => '}'); break;
 				case 'v': $p = array('open' => '|', 'close' => '|'); break;
+				case 'V': $p = array('open' => '‖', 'close' => '‖'); break;
 				default : $p = array('open' => '',  'close' => '' );  break;
 			}
 
