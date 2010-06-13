@@ -10,6 +10,7 @@ $com = commands::getInstance();
 $com->newCommand('\binom', 		2, '\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}');
 $com->newCommand('\dot', 		1, '\\overset{#1}{.}');
 $com->newCommand('\vec', 		1, '\\woverset{#1}{\\rightarrow{}}');
+$com->newCommand('\overline', 		1, '\\woverset{#1}{\\moverline{}}');
 $com->newCommand('\overset',		2, '\\moverset{#2}{#1}');
 $com->newCommand('\msqrt', 		2, '\\root{#2}{#1}');
 
@@ -433,6 +434,8 @@ $config->add_symbol('twoheadrightarrow','mo', 		'&#x21a0;');
 $config->add_symbol('upharpoonleft',	'mo', 		'&#x21bf;');
 $config->add_symbol('upharpoonright',	'mo', 		'&#x21be;');
 $config->add_symbol('upuparrows',	'mo', 		'&#x21c8;');
+
+$config->add_symbol('moverline',	'mo',		'&#x00AF;');
 
 
 // Word operators
