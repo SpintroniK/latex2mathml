@@ -74,7 +74,7 @@ class commands
 			$off = strpos($expr, ' ');
 			$offcom = strpos($expr, '{');
 
-			if($offcom != 0) $off = $offcom;
+			if($offcom != 0 && $offcom < $off) $off = $offcom;
 
 		 	$err =  substr($expr, 0, $off);
 			$l2xml->_setTag('merror', '['.$err.'?]');
