@@ -72,8 +72,12 @@ class commands
 		elseif($pcmd==0)
 		{
 			$off = strpos($expr, ' ');
+			$offcom = strpos($expr, '{');
+
+			if($offcom != 0) $off = $offcom;
+
 		 	$err =  substr($expr, 0, $off);
-			$l2xml->_setTag('merror', 'Undefined symbol or command : '.$err);
+			$l2xml->_setTag('merror', '['.$err.'?]');
 			$expr = substr($expr, $off);
 			return array( $expr);
 		}

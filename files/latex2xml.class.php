@@ -96,7 +96,7 @@ class LaTeX2Xml
 		//$this->dom->appendChild($pi);
 
 		// Drop new lines.
-		$math = str_replace(chr(10),'', $math);
+		$math = str_replace(chr(10),'', $math.' ');
 
 		// Create the namespace.
 		$this->math = $this->dom->createElement('math');
