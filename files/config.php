@@ -556,7 +556,10 @@ $config->add_command('sqrt',		'msqrt',	1);
 $config->add_command('substack',	'mrow',		1);
 $config->add_command('text',		'mtext',	1);
 $config->add_command('overset',		'mover',	2);
+$config->add_command('operatorname',	'mo',		1);
 
+
+// Left and Right
 
 $config->add_symbol('left{',		'mo',		'left{');
 $config->add_symbol('left|',		'mo',		'left|');

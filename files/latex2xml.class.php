@@ -354,6 +354,17 @@ class LaTeX2Xml
 			
 			break;
 
+			case 'operatorname':
+			
+				$args = commands::getInstance()->_getArgs($command, $expr);
+				$args[0] = substr($args[0], strlen($command));
+				$this->_setTag('mo', $args[0]);
+
+				$expr = substr($expr, strlen($args[0])+strlen($command)+3);
+				$this->_parseExpr($expr);
+			
+			break;
+
 
 			default:
 
