@@ -49,15 +49,15 @@ $config->add_symbol('vdots', 		'mo', 		'&#x22ee;');
 
 // Ponctuation and spaces
 
-$config->add_symbol('quad',	 	'mo', 		'&#x2003;');
-$config->add_symbol('qquad',	 	'mo', 		'&#x2003;');
-$config->add_symbol('thickspace', 	'mo', 		'&#x2002;');
-$config->add_symbol(';',	 	'mo', 		'&#x2002;');
-$config->add_symbol('medspace',	 	'mo', 		'&#x2005;');
-$config->add_symbol(':',	 	'mo', 		'&#x2005;');
-$config->add_symbol('thinspace', 	'mo', 		'&#x2004;');
-$config->add_symbol(',',	 	'mo', 		'&#x2004;');
-$config->add_symbol('!',	 	'mo', 		'&#x200b;');
+$config->add_symbol('quad',	 	'mspace',	'',			array('width' => '1em'));
+$config->add_symbol('qquad',	 	'mspace',	'',			array('width' => '2em'));
+$config->add_symbol('thickspace', 	'mspace',	'',			array('width' => '0.278em'));
+$config->add_symbol(';',	 	'mspace',	'',			array('width' => '0.278em'));
+$config->add_symbol('medspace',	 	'mspace',	'',			array('width' => '0.222em'));
+$config->add_symbol(':',	 	'mspace',	'',			array('width' => '0.222em'));
+$config->add_symbol('thinspace',	'mspace',	'',			array('width' => '0.167em'));
+$config->add_symbol(',',	 	'mspace',	'',			array('width' => '0.167em'));
+$config->add_symbol('!',	 	'mspace',	'',			array('width' => '-0.167em'));
 
 // Delimiters
 
