@@ -8,14 +8,15 @@ $com = commands::getInstance();
 
 
 $com->newCommand('\binom', 		2, '\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}');
+$com->newCommand('\overset',		2, '\\moverset{#2}{#1}');
+$com->newCommand('\msqrt', 		2, '\\root{#2}{#1}');
+$com->newCommand('\mathrm', 		1, '\\text{#1}');
+
+// Accents, defined by using overset
+
 $com->newCommand('\dot', 		1, '\\overset{#1}{.}');
 $com->newCommand('\vec', 		1, '\\woverset{#1}{\\rightarrow{}}');
 $com->newCommand('\overline', 		1, '\\woverset{#1}{\\moverline{}}');
-$com->newCommand('\overset',		2, '\\moverset{#2}{#1}');
-$com->newCommand('\msqrt', 		2, '\\root{#2}{#1}');
-
-$com->newCommand('\mathrm', 		1, '\\text{#1}');
-
 
 /**
 * Add LaTeX special chars... 
@@ -23,6 +24,14 @@ $com->newCommand('\mathrm', 		1, '\\text{#1}');
 *
 * $config->add_symbol('LaTeX command',	'mathml_tag',	'&#Html_entity;');
 */
+
+//Special symbols and commands (created especially for the script...)
+
+$config->add_symbol('moverline',	'mo',		'&#x00AF;');
+$config->add_command('moverset',	'mover',	2);
+$config->add_command('woverset',	'mover',	2,			array('accent' => 'true'));
+$config->add_command('root',		'mroot',	2);
+
 
 //Ellipsis (dots) characters
 
@@ -435,8 +444,6 @@ $config->add_symbol('upharpoonleft',	'mo', 		'&#x21bf;');
 $config->add_symbol('upharpoonright',	'mo', 		'&#x21be;');
 $config->add_symbol('upuparrows',	'mo', 		'&#x21c8;');
 
-$config->add_symbol('moverline',	'mo',		'&#x00AF;');
-
 
 // Word operators
 
@@ -548,10 +555,7 @@ $config->add_command('frac',		'mfrac',	2);
 $config->add_command('sqrt',		'msqrt',	1);
 $config->add_command('substack',	'mrow',		1);
 $config->add_command('text',		'mtext',	1);
-$config->add_command('root',		'mroot',	2);
 $config->add_command('overset',		'mover',	2);
-$config->add_command('moverset',	'mover',	2);
-$config->add_command('woverset',	'mover',	2,			array('accent' => 'true'));
 
 
 $config->add_symbol('left{',		'mo',		'left{');

@@ -140,7 +140,7 @@ class commands
 		$math = str_replace('\\left\}', '\\left}', $math);
 		$math = str_replace('\\right\{', '\\right{', $math);
 
-		$math = preg_replace('/\\\sqrt\[([0-9])\]\{/U','\\msqrt{$1}{', $math); 
+		$math = preg_replace('/\\\sqrt\[([0-9]*)\]\{/U','\\msqrt{$1}{', $math); 
 
 		$math = strtr($math, LaTeX2Xml::getInstance()->getSymbols());
 
