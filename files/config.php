@@ -11,6 +11,7 @@ $com->newCommand('\binom', 		2, '\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}');
 $com->newCommand('\overset',		2, '\\moverset{#2}{#1}');
 $com->newCommand('\msqrt', 		2, '\\root{#2}{#1}');
 $com->newCommand('\mathrm', 		1, '\\text{#1}');
+$com->newCommand('\dfrac',		2, '\\frac{#1}{\\displaystyle{#2}}');
 
 // Accents, defined by using overset
 
@@ -557,6 +558,7 @@ $config->add_command('substack',	'mrow',		1);
 $config->add_command('text',		'mtext',	1);
 $config->add_command('overset',		'mover',	2);
 $config->add_command('operatorname',	'mo',		1);
+$config->add_command('displaystyle',	'mstyle',	1,			array('displaystyle' => 'true'));
 
 
 // Left and Right
