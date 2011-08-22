@@ -568,9 +568,9 @@ $config->add_symbol('left|',		'mo',		'left|');
 $config->add_symbol('left(',		'mo',		'left(');
 $config->add_symbol('left[',		'mo',		'left[');
 $config->add_symbol('left\\lVert',	'mo',		'left\\lVert');
-$config->add_symbol('right{',		'mo',		'right{');
+$config->add_symbol('right}',		'mo',		'right}');
 $config->add_symbol('right|',		'mo',		'right|');
-$config->add_symbol('right(',		'mo',		'right(');
+$config->add_symbol('right)',		'mo',		'right)');
 $config->add_symbol('right]',		'mo',		'right]');
 $config->add_symbol('right\\rVert',	'mo',		'right\\rVert');
 

@@ -146,8 +146,16 @@ class commands
 
 		$this->_parseCmd($math);
 
-		$math = str_replace($this->from, $this->to, $math);
-		
+		$n = count($this->from);
+
+//var_dump($this->from);
+//var_dump($this->to);
+
+		for($i = $n-1; $i >= 0; $i--)
+		{
+			$math = str_replace($this->from[$i], $this->to[$i], $math);
+
+		}
 
 		return ' '.$math;
 	}
@@ -200,15 +208,16 @@ class commands
 
 			}
 
+			$to = str_replace($rArgs, $args, substr($this->commands['\\'.$command],1));
+
 			$this->from[] = $from;
-			$this->to[]   = str_replace($rArgs, $args, substr($this->commands['\\'.$command],1));
+			$this->to[]   = $to;
 
 			$this->_parseCmd($args[$i]);
-		}
 
+		}	
+			$this->_parseCmd(substr($expr, strlen($command)+1));
 
-		
-		$this->_parseCmd(substr($expr, strlen($command)+1));
 	}
 
 

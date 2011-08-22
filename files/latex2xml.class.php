@@ -104,7 +104,7 @@ class LaTeX2Xml
 		$this->math->setAttribute('xmlns','http://www.w3.org/1998/Math/MathML');
 		$this->math->setAttribute('title',$math);
 		//$this->math->setAttribute('title', $math);
-		
+
 		// Replace some symbols and functions.
 		$math = commands::getInstance()->replaceAll($math);
 
@@ -171,7 +171,7 @@ class LaTeX2Xml
 
 				$command = commands::getInstance()->getCommand($expr);	
 				$this->_parseFormula($command, $expr);
-			
+
 			}
 			else
 				$this->_parseInd($expr, $char);
@@ -310,6 +310,7 @@ class LaTeX2Xml
 			$cchar2 = str_replace('\rVert', '‖', $cchar);
 
 			$this->_parseEnv('leftright', $content, array('open' => $ochar2, 'close' => $cchar2));
+
 
 			$expr = substr($expr, strlen($content)+$lleft+$lright+strlen($ochar)+strlen($cchar)+4);
 
