@@ -148,9 +148,6 @@ class commands
 
 		$n = count($this->from);
 
-//var_dump($this->from);
-//var_dump($this->to);
-
 		for($i = $n-1; $i >= 0; $i--)
 		{
 			$math = str_replace($this->from[$i], $this->to[$i], $math);
