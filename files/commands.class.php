@@ -148,8 +148,17 @@ class commands
 
 		$n = count($this->from);
 
-		$math = str_replace($this->from, $this->to, $math);
+		foreach($this->from as $k => $v)
+		{
+			$math = str_replace($this->from[$k], $this->to[$k], $math);
 
+			for($i = $k+1; $i < $n; $i++)
+			{
+				$this->from[$i] = str_replace($v, $this->to[$k], $this->from[$i]);
+				$this->to[$i] = str_replace($v, $this->to[$k], $this->to[$i]);
+			}
+
+		}
 
 
 		return ' '.$math;
