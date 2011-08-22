@@ -148,11 +148,9 @@ class commands
 
 		$n = count($this->from);
 
-		for($i = $n-1; $i >= 0; $i--)
-		{
-			$math = str_replace($this->from[$i], $this->to[$i], $math);
+		$math = str_replace($this->from, $this->to, $math);
 
-		}
+
 
 		return ' '.$math;
 	}
