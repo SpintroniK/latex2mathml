@@ -1,5 +1,5 @@
 <?php
-
+set_time_limit(2);
 // Serve the document as an xml file.
 header("Content-type: application/xhtml+xml; charset=utf-8");
 
@@ -14,7 +14,7 @@ require('../files/latex2xml.class.php');
 $l2xml = LaTeX2Xml::getInstance();
 
 // Parse a simple formula.
-$l2xml->parseMath("\\frac{\pi}{2}");
+$l2xml->parseMath("\\frac{\pi}{ test");
 
 // Display the MathML of the previous formula.
 echo $l2xml->parse();
