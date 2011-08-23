@@ -83,6 +83,7 @@ class commands
 		}
 		else return;
 
+
 		$args = array();
 
 		if($nArgs == 0 && $pcmd == 0)
@@ -93,13 +94,12 @@ class commands
 		}
 		else
 		{
-			$s = $expr[0];
 			$l = strlen($expr);
 			$p = strpos($expr, '{')+1;
 			$b = 1;
 			$s = 1;
 
-			for($i = $p; $nArgs > 0; $i++)
+			for($i = $p; $nArgs > 0 && $i < $l; $i++)
 			{
 				if($expr[$i] == '{')		$b++;
 				elseif($expr[$i] == '}')	$b--;
@@ -112,7 +112,7 @@ class commands
 					$s = $i+1;
 					$i++;
 				}
-					
+
 			}
 
 			$args[] = substr($expr, $s, $l);

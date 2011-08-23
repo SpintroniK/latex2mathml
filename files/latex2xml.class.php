@@ -207,6 +207,7 @@ class LaTeX2Xml
 		return $this->element[$command]['m'];
 	}
 
+
 	/**
 	* Get the mathml attribute to put in the xml document
 	* @param $command The command.
