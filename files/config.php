@@ -9,6 +9,7 @@ $com = commands::getInstance();
 
 $com->newCommand('\binom', 		2, '\\begin{pmatrix} #1 \\\\ #2 \\end{pmatrix}');
 $com->newCommand('\overset',		2, '\\moverset{#2}{#1}');
+$com->newCommand('\stackrel',		2, '\\moverset{#2}{#1}');
 $com->newCommand('\msqrt', 		2, '\\root{#2}{#1}');
 $com->newCommand('\mathrm', 		1, '\\text{#1}');
 $com->newCommand('\dfrac',		2, '\\frac{#1}{\\displaystyle{#2}}');
