@@ -301,8 +301,9 @@ class LaTeX2Xml
 	private function _parseFormula($command, &$expr)
 	{
 
-		if(substr($command, 0, 4) == 'left')
+		if(substr($command, 0, 4) == 'left' && !preg_match('![a-z]!i',  $expr[5]))
 		{
+
 			list($content, $ochar, $cchar) = $this->_getLRContent($expr);
 			$lleft = strlen('\\left');
 			$lright= strlen('\\right');
