@@ -557,6 +557,7 @@ $config->add_command('sqrt',		'msqrt',	1);
 $config->add_command('substack',	'mrow',	1);
 $config->add_command('text',		'mtext',	1);
 $config->add_command('overset',	'mover',	2);
+$config->add_command('underset',	'munder',	2);
 $config->add_command('operatorname',	'mo',		1);
 $config->add_command('displaystyle',	'mstyle',	1,			array('displaystyle' => 'true'));
 
