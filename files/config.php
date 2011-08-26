@@ -108,7 +108,11 @@ $config->add_symbol('Updownarrow', 	'mo', 		'&#x21d5;',		array('largeop' => 'tru
 // Integrals 
 
 $config->add_symbol('int', 		'mo', 		'&#x222b;',		array('largeop' => 'true'));
+$config->add_symbol('iint', 		'mo', 		'&#x222C;',		array('largeop' => 'true'));
+$config->add_symbol('iiint', 		'mo', 		'&#x222D;',		array('largeop' => 'true'));
 $config->add_symbol('oint', 		'mo', 		'&#x222e;',		array('largeop' => 'true'));
+$config->add_symbol('oiint', 		'mo', 		'&#x222F;',		array('largeop' => 'true'));
+$config->add_symbol('oiiint', 		'mo', 		'&#x2230;',		array('largeop' => 'true'));
 $config->add_symbol('smallint', 	'mo', 		'&#x222b;',		array('largeop' => 'false'));
 
 // Greek letters
@@ -248,7 +252,7 @@ $config->add_symbol('precnapprox', 	'mo', 		'&#x2ab9;');
 $config->add_symbol('precneqq',	'mo', 		'&#x2ab5;');
 $config->add_symbol('precnsim',	'mo', 		'&#x22e8;');
 $config->add_symbol('precsim',	 	'mo', 		'&#x227e;');
-$config->add_symbol('rsingdotseq', 	'mo', 		'&#x2253;');
+$config->add_symbol('risingdotseq', 	'mo', 		'&#x2253;');
 $config->add_symbol('sim',	 	'mo', 		'&#x223c;');
 $config->add_symbol('simeq',	 	'mo', 		'&#x2243;');
 $config->add_symbol('succ',	 	'mo', 		'&#x227b;');
@@ -291,6 +295,7 @@ $config->add_symbol('neg', 		'mo', 		'&#x00ac;');
 $config->add_symbol('nexists', 	'mo', 		'&#x2204;');
 $config->add_symbol('prime', 		'mo', 		'&#x2032;');
 $config->add_symbol('sharp', 		'mo', 		'&#x266f;');
+$config->add_symbol('spadesuit',	'mo',		'&#x2660;');
 $config->add_symbol('surd', 		'mo', 		'&#x221a;');
 $config->add_symbol('top', 		'mo', 		'&#x22a4;');
 $config->add_symbol('triangle',	'mo', 		'&#x25b5;');
@@ -391,6 +396,8 @@ $config->add_symbol('wp', 		'mo', 		'&#x2118;');
 
 // Arrows
 
+$config->add_symbol('circlearrowleft',  'mo', 		'&#x27F2;');
+$config->add_symbol('circlearrowright', 'mo',		'&#x27F3;');
 $config->add_symbol('curvearrowleft',	'mo', 		'&#x21b6;');
 $config->add_symbol('curvearrowright',	'mo', 		'&#x21b7;');
 $config->add_symbol('downdownarrows',	'mo', 		'&#x21ca;');
@@ -399,6 +406,8 @@ $config->add_symbol('downharpoonright','mo', 		'&#x21c2;');
 $config->add_symbol('gets', 		'mo', 		'&#x2190;');
 $config->add_symbol('hookleftarrow',	'mo', 		'&#x21a9;');
 $config->add_symbol('hookrightarrow',	'mo', 		'&#x21aa;');
+$config->add_symbol('iff',		'mo', 		'&#x27fa;');
+$config->add_symbol('implies',		'mo',		'&#x27F9;');
 $config->add_symbol('leftarrow',	'mo', 		'&#x2190;');
 $config->add_symbol('Leftarrow',	'mo', 		'&#x21d0;');
 $config->add_symbol('leftarrowtail',	'mo', 		'&#x21a2;');
@@ -406,14 +415,18 @@ $config->add_symbol('leftharpoondown',	'mo', 		'&#x21bd;');
 $config->add_symbol('leftharpoonup',	'mo', 		'&#x21bc;');
 $config->add_symbol('leftleftarrows',	'mo', 		'&#x21c7;');
 $config->add_symbol('leftrightarrow',	'mo', 		'&#x21bc;');
+$config->add_symbol('Leftrightarrow',	'mo',		'&#x21D4;');
 $config->add_symbol('leftrightarrows',	'mo', 		'&#x21c6;');
 $config->add_symbol('leftrightharpoons','mo', 		'&#x21cb;');
 $config->add_symbol('leftrightsuigarrow','mo',		'&#x21ad;');
 $config->add_symbol('Lleftarrow',	'mo', 		'&#x21da;');
 $config->add_symbol('longleftarrow',	'mo', 		'&#x27f5;');
 $config->add_symbol('Longleftarrow',	'mo', 		'&#x27f8;');
-$config->add_symbol('logleftrightarrow','mo', 		'&#x27f7;');
+$config->add_symbol('longleftrightarrow','mo', 	'&#x27f7;');
 $config->add_symbol('Longleftrightarrow','mo',		'&#x27fa;');
+$config->add_symbol('longmapsto',	'mo',		'&#x27FC;');
+$config->add_symbol('longrightarrow',	'mo',		'&#x27F6;');
+$config->add_symbol('Longrightarrow',	'mo', 		'&#x27F9;');
 $config->add_symbol('looparrowleft',	'mo', 		'&#x21ab;');
 $config->add_symbol('looparrowright',	'mo', 		'&#x21ac;');
 $config->add_symbol('Lsh', 		'mo', 		'&#x21b0;');
@@ -440,6 +453,7 @@ $config->add_symbol('rightsquidarrow',	'mo', 		'&#x219d;');
 $config->add_symbol('Rrightarrow',	'mo', 		'&#x21db;');
 $config->add_symbol('Rsh', 		'mo', 		'&#x21b1;');
 $config->add_symbol('searrow', 	'mo', 		'&#x2198;');
+$config->add_symbol('rightsquigarrow',	'mo',		'&#x21DD;');
 $config->add_symbol('swarrow', 	'mo', 		'&#x2199;');
 $config->add_symbol('to', 		'mo', 		'&#x2192;');
 $config->add_symbol('twoheadleftarrow','mo', 		'&#x219e;');
