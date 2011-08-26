@@ -110,6 +110,7 @@ $config->add_symbol('Updownarrow', 	'mo', 		'&#x21d5;',		array('largeop' => 'tru
 $config->add_symbol('int', 		'mo', 		'&#x222b;',		array('largeop' => 'true'));
 $config->add_symbol('iint', 		'mo', 		'&#x222C;',		array('largeop' => 'true'));
 $config->add_symbol('iiint', 		'mo', 		'&#x222D;',		array('largeop' => 'true'));
+$config->add_symbol('iiiint', 		'mo', 		'&#x2A0C;',		array('largeop' => 'true'));
 $config->add_symbol('oint', 		'mo', 		'&#x222e;',		array('largeop' => 'true'));
 $config->add_symbol('oiint', 		'mo', 		'&#x222F;',		array('largeop' => 'true'));
 $config->add_symbol('oiiint', 		'mo', 		'&#x2230;',		array('largeop' => 'true'));
@@ -374,6 +375,7 @@ $config->add_symbol('Vvdash',	 	'mo', 		'&#x22aa;');
 // Other alphabetic symbols
 
 $config->add_symbol('aleph', 		'mo', 		'&#x2135;');
+$config->add_symbol('alef', 		'mo', 		'&#x2135;');
 $config->add_symbol('Bbbk', 		'mo', 		'&#x1d55;');
 $config->add_symbol('beth', 		'mo', 		'&#x2136;');
 $config->add_symbol('circledS',	'mo', 		'&#x24c8;');
@@ -386,7 +388,7 @@ $config->add_symbol('Game', 		'mo', 		'&#x2141;');
 $config->add_symbol('gimel', 		'mo', 		'&#x2137;');
 $config->add_symbol('hbar', 		'mo', 		'&#x210f;');
 $config->add_symbol('hslash', 		'mo', 		'&#x210f;');
-$config->add_symbol('lm', 		'mo', 		'&#x2111;');
+$config->add_symbol('Im',		'mo',		'&#x1D50D;');
 $config->add_symbol('mho', 		'mo', 		'&#x2127;');
 $config->add_symbol('partial', 	'mo', 		'&#x2202;');
 $config->add_symbol('Re', 		'mo', 		'&#x211c;');
@@ -591,6 +593,10 @@ $config->add_symbol('right|',		'mo',		'right|');
 $config->add_symbol('right)',		'mo',		'right)');
 $config->add_symbol('right]',		'mo',		'right]');
 $config->add_symbol('right\\rVert',	'mo',		'right\\rVert');
+
+// Others
+
+$config->add_symbol('euro',		'mo',		'&#xE11A;');
 
 // Operators
 
