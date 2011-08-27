@@ -14,6 +14,7 @@ $com->newCommand('\stackrel',		2, '\\moverset{#2}{#1}');
 $com->newCommand('\msqrt', 		2, '\\root{#2}{#1}');
 $com->newCommand('\mathrm', 		1, '\\text{#1}');
 $com->newCommand('\dfrac',		2, '\\frac{#1}{\\displaystyle{#2}}');
+$com->newCommand('\Pmod',		1, '( \\,{} \\bmod{} \\,{} #1 \\,{} )');
 
 // Accents, defined by using overset
 
@@ -596,7 +597,14 @@ $config->add_symbol('right\\rVert',	'mo',		'right\\rVert');
 
 // Others
 
-$config->add_symbol('euro',		'mo',		'&#xE11A;');
+$config->add_symbol('euro',		'mi',		'&#xE11A;');
+$config->add_symbol('imath',		'mi',		'&#x0131;');
+$config->add_symbol('jmath',		'mi',		'&#x0237;');
+$config->add_symbol('nshortmid',	'mo', 		'&#x2224;');
+$config->add_symbol('empty',		'mo',		'&#x2205;');
+$config->add_symbol('emptyset',	'mo',		'&#x2205;');
+$config->add_symbol('varnothing',	'mo',		'&#x2205;');
+$config->add_symbol('O',		'mo',		'&#x2205;');
 
 // Operators
 
