@@ -598,8 +598,8 @@ $config->add_symbol('right\\rVert',	'mo',		'right\\rVert');
 // Others
 
 $config->add_symbol('euro',		'mi',		'&#xE11A;');
-$config->add_symbol('imath',		'mi',		'&#x0131;');
-$config->add_symbol('jmath',		'mi',		'&#x0237;');
+$config->add_symbol('imath',		'mi',		'&#x1D6A4;');
+$config->add_symbol('jmath',		'mi',		'&#x1D6A5;');
 $config->add_symbol('nshortmid',	'mo', 		'&#x2224;');
 $config->add_symbol('empty',		'mo',		'&#x2205;');
 $config->add_symbol('emptyset',	'mo',		'&#x2205;');
