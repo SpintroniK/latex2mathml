@@ -28,6 +28,7 @@ $com->newCommand('\overline', 		1, '\\woverset{#1}{\\moverline{}}');
 $config->add_command('mathit',		'mtext', 	1, 			array('mathvariant' => 'italic')); 
 $config->add_command('mathbf',		'mtext', 	1, 			array('mathvariant' => 'bold')); 
 $config->add_command('bm', 		'mtext', 	1, 			array('mathvariant' => 'bold'));
+$config->add_command('mathbb',		'mtext', 	1, 			array('mathvariant' => 'double-struck'));
 
 
 /**

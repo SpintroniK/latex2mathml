@@ -10,7 +10,7 @@ class commands
 
 	private $config;
 	private $commands	= array();
-	private $from 		= array();
+	private $from 	= array();
 	private $to		= array();
 
 	private function __construct()
