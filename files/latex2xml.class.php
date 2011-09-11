@@ -366,11 +366,23 @@ class LaTeX2Xml
 						break;
 					}
 
+	                               $this->_setTag('mtext', $args[0], $attr);
+	                               $expr = substr($expr, strlen($args[0])+strlen($command)+3);
+
+				}
+				else
+				{
+
+					$this->_openTag('mtext', $attr);
+						$this->_parseExpr($args[0]);
+					$this->_closeTag();
+
+					$expr = $this->_upExpr($expr);
+					$expr = substr($expr, strlen($command)+3);
+
 				}
 
-				$this->_setTag('mtext', $args[0], $attr);
 
-				$expr = substr($expr, strlen($args[0])+strlen($command)+3);
 				$this->_parseExpr($expr);
 			
 			break;
@@ -622,6 +634,13 @@ class LaTeX2Xml
 
 			if(($expr[0] == '^' || $expr[0] == '_') && $expr[0] != $char)
 			{
+				$c = count($this->tag)-1;
+
+				if(!$this->tag[$c]->lastChild)
+				{
+					$this->_setTag('mspace', '', array('width' => '0.167em'));
+				}
+
 				$s = $expr[0];
 				$c = count($this->tag)-1;
 				$sup = $this->dom->createElement(($this->tag[$c]->lastChild->nodeValue =='∑')? 'munderover':'msubsup');
