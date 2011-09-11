@@ -22,6 +22,13 @@ $com->newCommand('\dot', 		1, '\\overset{#1}{.}');
 $com->newCommand('\vec', 		1, '\\woverset{#1}{\\rightarrow{}}');
 $com->newCommand('\overline', 		1, '\\woverset{#1}{\\moverline{}}');
 
+
+// Math fonts
+
+$config->add_command('mathbf',		'mtext', 	1, 			array('mathvariant' => 'bold')); 
+$config->add_command('bm', 		'mtext', 	1, 			array('mathvariant' => 'bold'));
+
+
 /**
 * Add LaTeX special chars... 
 * Use the following syntax : 
@@ -417,7 +424,7 @@ $config->add_symbol('leftarrowtail',	'mo', 		'&#x21a2;');
 $config->add_symbol('leftharpoondown',	'mo', 		'&#x21bd;');
 $config->add_symbol('leftharpoonup',	'mo', 		'&#x21bc;');
 $config->add_symbol('leftleftarrows',	'mo', 		'&#x21c7;');
-$config->add_symbol('leftrightarrow',	'mo', 		'&#x21bc;');
+$config->add_symbol('leftrightarrow',	'mo', 		'&#x2194;');
 $config->add_symbol('Leftrightarrow',	'mo',		'&#x21D4;');
 $config->add_symbol('leftrightarrows',	'mo', 		'&#x21c6;');
 $config->add_symbol('leftrightharpoons','mo', 		'&#x21cb;');
