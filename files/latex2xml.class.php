@@ -356,7 +356,7 @@ class LaTeX2Xml
 				$attr = $this->_getAttr($command);
 				$args = commands::getInstance()->_getArgs($command, $expr);
 				$args[0] = substr($args[0], strlen($command));
-
+//!\ BUGGY !
 				if(isSet($attr['mathvariant']))
 				{
 					switch ($command)
