@@ -348,14 +348,13 @@ class LaTeX2Xml
 
 			case (		$command == 'text' 
 				or 	$command == 'mathbf'
+				or 	$command == 'mathit'
 				or 	$command == 'bm'
 			      ) :
-			
-				$attr = ($command == 'mathbf' or $command == 'bm') ? array('mathvariant' => 'bold') : array();
 
 				$args = commands::getInstance()->_getArgs($command, $expr);
 				$args[0] = substr($args[0], strlen($command));
-				$this->_setTag('mtext', $args[0], $attr);
+				$this->_setTag('mtext', $args[0], $this->_getAttr($command));
 
 				$expr = substr($expr, strlen($args[0])+strlen($command)+3);
 				$this->_parseExpr($expr);
