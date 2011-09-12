@@ -584,7 +584,7 @@ $config->add_symbol('wr',	 	'mo', 		'&#x2240;');
 $config->add_command('frac',		'mfrac',	2);
 $config->add_command('sqrt',		'msqrt',	1);
 $config->add_command('substack',	'mrow',	1);
-$config->add_command('text',		'mtext',	1);
+$config->add_command('text',		'mtext',	1, 			array('mathvariant' => 'normal'));
 $config->add_command('overset',	'mover',	2);
 $config->add_command('underset',	'munder',	2);
 $config->add_command('operatorname',	'mo',		1);
