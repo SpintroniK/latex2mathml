@@ -1,3 +1,7 @@
+latex2mathml (0.1.0-beta)
+
+  * Replace mfenced by mrow + mo.
+
 latex2mathml (0.1a-3)
 
   * Bug correction, forgotten \right in config.php (lines 557 to 560)
@@ -17,6 +21,5 @@ latex2mathml (0.1a-1)
 latex2mathml (0.1a)
 
   * No changes
-    This is the first release
+  * This is the first release
 
- -- Jeremy Oden <j.oden@wanadoo.fr>  Wed,  16 Jun 2009 14:48:49 +0100

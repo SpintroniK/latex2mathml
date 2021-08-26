@@ -81,15 +81,15 @@ class LaTeX2Xml
 	public function parseMath($math)
 	{
 		
-                $this->tag = array();
+        $this->tag = array();
 
-                $this->dom = new DOMDocument();
+        $this->dom = new DOMDocument();
 
-                $this->dom->encoding = 'utf-8';
-                $this->dom->standalone = false;
-                $this->dom->validateOnParse = true;
-                $this->dom->preserveWhiteSpace = false;
-                $this->dom->formatOutput   = true;
+        $this->dom->encoding = 'utf-8';
+        $this->dom->standalone = false;
+        $this->dom->validateOnParse = true;
+        $this->dom->preserveWhiteSpace = false;
+        $this->dom->formatOutput   = true;
 
 		// Adding the stylesheet.
 		//$pi = new DOMProcessingInstruction("xml-stylesheet", "type=\"text/css\" href=\"./style.css\"");
@@ -492,7 +492,7 @@ class LaTeX2Xml
 		if(substr($env,1) == 'matrix')
 		{
 			$type = substr($env, 0, 1);
-
+            
 			switch($type)
 			{
 				case 'p': $p = array('open' => '(', 'close' => ')'); break;
@@ -502,9 +502,9 @@ class LaTeX2Xml
 				case 'V': $p = array('open' => '‖', 'close' => '‖'); break;
 				default : $p = array('open' => '',  'close' => '' );  break;
 			}
-
-				$this->_openTag('mfenced',$p);
-					$this->_openTag('mrow');
+                
+				$this->_openTag('mrow');
+                    $this->_setTag('mo', $p['open']);
 						$this->_openTag('mtable');
 							$this->_openTag('mtr');
 								$this->_openTag('mtd');
@@ -512,7 +512,7 @@ class LaTeX2Xml
 								$this->_closeTag();
 							$this->_closeTag();
 						$this->_closeTag();
-					$this->_closeTag();
+                    $this->_setTag('mo', $p['close']);
 				$this->_closeTag();
 				$this->prev_char = '';
 
@@ -522,7 +522,8 @@ class LaTeX2Xml
 			{
 				case 'cases' : 
 
-					$this->_openTag('mfenced',array('open' => '{', 'close' => ''));
+					$this->_openTag('mrow');
+                        $this->_setTag('mo', '{');
 							$this->_openTag('mrow');
 								$this->_openTag('mtable');
 									$this->_openTag('mtr');
@@ -532,6 +533,8 @@ class LaTeX2Xml
 									$this->_closeTag();
 								$this->_closeTag();
 							$this->_closeTag();
+
+                        $this->_setTag('mo', '');
 						$this->_closeTag();
 						$this->prev_char = '';
 
@@ -539,11 +542,13 @@ class LaTeX2Xml
 
 				case 'leftright' :
 
-					$this->_openTag('mfenced', $delim);
-						$this->_openTag('mrow');
-							$this->_parseExpr($content);
-						$this->_closeTag();
-					$this->_closeTag();
+					$this->_openTag('mrow');
+					    $this->_setTag('mo', $delim['open']);
+					    $this->_openTag('mrow');
+						    $this->_parseExpr($content);
+					    $this->_closeTag();
+					    $this->_setTag('mo', $delim['close']);
+				    $this->_closeTag();
 				$this->prev_char = '';
 
 				break;
@@ -596,7 +601,7 @@ class LaTeX2Xml
 
 	private function _parseOp(&$expr, &$char)
 	{
-		$this->_setTag('mo', $char, ($char == '(' || $char == ')') ? array('maxsize' => '1') : array());
+		$this->_setTag('mo', $char, ($char == '(' || $char == ')') ? array('stretchy' => 'false') : array());
 		$this->_upExpr($expr);
 		$this->_parseExpr($expr);
 	}
